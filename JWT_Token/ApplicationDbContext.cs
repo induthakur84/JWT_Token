@@ -9,6 +9,7 @@ namespace JWT_Token
         {
         }
         public DbSet<User> Users { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
 //15 -10 user

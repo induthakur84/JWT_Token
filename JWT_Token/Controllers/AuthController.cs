@@ -29,12 +29,8 @@ namespace JWT_Token.Controllers
                 return BadRequest(new { message = result });
             }
         }
-        ////api/auth/login/username:ram/password:ram123
-        ///
-
-
-        //
-        [Authorize]
+       
+     
         [HttpPost("login")]
 
         public async Task<IActionResult>Login([FromBody] LoginDto loginDto)
