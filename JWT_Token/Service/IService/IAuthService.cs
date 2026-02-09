@@ -15,7 +15,9 @@ namespace JWT_Token
     {
         Task<string> Register(User user);
 
-        Task<string> Login(LoginDto loginDto);
+        Task<object> Login(LoginDto loginDto);
+
+        Task<object> RefreshToken(string refreshToken);
 
 
     }

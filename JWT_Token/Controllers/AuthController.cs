@@ -41,5 +41,16 @@ namespace JWT_Token.Controllers
             return BadRequest("Invalid username or password");
         }
 
+        [HttpPost("refresh-token")]
+        public async Task<IActionResult> RefreshToken([FromBody] string refreshToken)
+        {
+            var result = await _authService.RefreshToken(refreshToken);
+
+            if (result == null)
+                return Unauthorized("Invalid refresh token");
+
+            return Ok(result);
+        }
+
     }
 }
